@@ -4,6 +4,8 @@
 
 # rode "npm run dev" para rodar o projeto localmente será disponibilizado uma porta do localhost normalmente 5173
 
+# para começar a editar sempre inicie rodando git pull origin develop
+
 # use git checkout -b nomedasuabranch para criar sua branch e altere a vontade atualmente a pagina principal é a src/app.jsx altere seu retorno incluindo tags html e estilizando usando tailwind dentro da className da tag ex: div className="flex items-center justify-center h-screen"> consultem a documentação para encontrar o que quiserem de estilo: <https://tailwindcss.com/>
 
 # use git checkout develop para ir para branch de desenvolvimento e git merge nomedasuabranch para colocar suas alterações na branch de desenvolvimento
