@@ -33,12 +33,12 @@ export default function Contact() {
   };
 
   return (
-    <main className="overflow-hidden pt-20">
+    <main className="overflow-hidden">
       {/* HERO */}
-      <section className="relative min-h-[60vh] flex items-center">
+      <section className="relative min-h-[10vh] flex items-center">
         {/* Background Glow */}
-        <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-cyan-500/30 blur-[120px]" />
-        <div className="absolute bottom-[-120px] right-[-80px] w-[320px] h-[320px] bg-blue-600/20 blur-[120px]" />
+        <div className="absolute top-[-50px] left-[-100px] w-[300px] h-[300px] bg-cyan-500/30 blur-[120px]" />
+        <div className="absolute bottom-[-60px] right-[-80px] w-[320px] h-[320px] bg-blue-600/20 blur-[120px]" />
 
         <div className="max-w-7xl mx-auto px-6 py-24 w-full relative z-10">
           <h1 className="text-5xl md:text-6xl font-black leading-tight">
