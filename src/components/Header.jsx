@@ -13,7 +13,11 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="w-11 h-11 rounded-xl overflow-hidden shadow-lg shadow-cyan-500/20">
-              <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
+              <img
+                src="/logo.png"
+                alt="Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div>
@@ -32,12 +36,12 @@ export default function Header() {
               Home
             </Link>
 
-            <a
-              href="#"
+            <Link
+              to="/servicos"
               className="text-gray-300 hover:text-cyan-400 transition"
             >
               Serviços
-            </a>
+            </Link>
 
             <a
               href="#"
@@ -110,13 +114,13 @@ export default function Header() {
             Home
           </Link>
 
-          <a
-            href="#"
+          <Link
+            to="/servicos"
             onClick={() => setIsOpen(false)}
             className="text-lg text-gray-300 hover:text-cyan-400 transition"
           >
             Serviços
-          </a>
+          </Link>
 
           <a
             href="#"
