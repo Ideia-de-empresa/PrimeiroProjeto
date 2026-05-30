@@ -17,8 +17,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
-                <span className="font-bold text-lg">T</span>
+                      <div className="w-11 h-11 rounded-xl overflow-hidden shadow-lg shadow-cyan-500/20">
+              <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
               </div>
 
               <div>
@@ -67,7 +67,7 @@ export default function Footer() {
           </p>
 
           <a
-            href="#"
+            href="/privacidade"
             className="flex items-center gap-2 text-sm text-gray-400 hover:text-cyan-400 transition"
           >
             Política de privacidade
