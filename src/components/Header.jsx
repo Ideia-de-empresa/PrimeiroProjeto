@@ -12,8 +12,8 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
-              <span className="font-bold text-lg">T</span>
+            <div className="w-11 h-11 rounded-xl overflow-hidden shadow-lg shadow-cyan-500/20">
+              <img src="/logo.png" alt="Logo" className="w-full h-full object-cover" />
             </div>
 
             <div>
@@ -25,12 +25,12 @@ export default function Header() {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-8">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-gray-300 hover:text-cyan-400 transition"
             >
               Home
-            </a>
+            </Link>
 
             <a
               href="#"
@@ -46,12 +46,12 @@ export default function Header() {
               Projetos
             </a>
 
-            <a
-              href="#"
+            <Link
+              to="/contato"
               className="text-gray-300 hover:text-cyan-400 transition"
             >
               Contato
-            </a>
+            </Link>
           </nav>
 
           {/* Actions */}
@@ -102,13 +102,13 @@ export default function Header() {
 
         {/* Links */}
         <nav className="flex flex-col p-6 gap-5">
-          <a
-            href="#"
+          <Link
+            to="/"
             onClick={() => setIsOpen(false)}
             className="text-lg text-gray-300 hover:text-cyan-400 transition"
           >
             Home
-          </a>
+          </Link>
 
           <a
             href="#"
@@ -126,13 +126,13 @@ export default function Header() {
             Projetos
           </a>
 
-          <a
-            href="#"
+          <Link
+            to="/contato"
             onClick={() => setIsOpen(false)}
             className="text-lg text-gray-300 hover:text-cyan-400 transition"
           >
             Contato
-          </a>
+          </Link>
 
           <button className="mt-6 w-full py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-[1.02] transition duration-300 shadow-lg shadow-cyan-500/20">
             Começar
