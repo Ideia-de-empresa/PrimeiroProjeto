@@ -8,8 +8,19 @@ import {
   CheckCircle,
   Send,
 } from "lucide-react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Services() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollToBudget) {
+      document.getElementById("orcamento")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, [location]);
   return (
     <main className="overflow-hidden">
       {/* HERO */}
@@ -136,7 +147,7 @@ export default function Services() {
       </section>
 
       {/* FORMULÁRIO */}
-      <section className="max-w-4xl mx-auto px-6 py-24">
+      <section id="orcamento" className="max-w-4xl mx-auto px-6 py-24">
         <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-xl">
           <div className="text-center">
             <h2 className="text-4xl font-bold">Solicite um orçamento</h2>

@@ -1,11 +1,18 @@
 // src/components/Header.jsx
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate();
+  const irParaOrcamento = () => {
+    navigate("/servicos", {
+      state: {
+        scrollToBudget: true,
+      },
+    });
+  };
   return (
     <>
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
@@ -60,8 +67,11 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 transition duration-300 shadow-lg shadow-cyan-500/30">
-              Começar
+            <button
+              onClick={irParaOrcamento}
+              className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 transition duration-300 shadow-lg shadow-cyan-500/30"
+            >
+              Solicitar orçamento
             </button>
 
             {/* Mobile Menu Button */}
@@ -138,8 +148,14 @@ export default function Header() {
             Contato
           </Link>
 
-          <button className="mt-6 w-full py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-[1.02] transition duration-300 shadow-lg shadow-cyan-500/20">
-            Começar
+          <button
+            onClick={() => {
+              setIsOpen(false);
+              irParaOrcamento();
+            }}
+            className="mt-6 w-full text-center py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600"
+          >
+            Solicitar orçamento
           </button>
         </nav>
       </aside>
