@@ -43,12 +43,12 @@ export default function Header() {
               Serviços
             </Link>
 
-            <a
-              href="#"
+            <Link
+              to="/projetos"
               className="text-gray-300 hover:text-cyan-400 transition"
             >
               Projetos
-            </a>
+            </Link>
 
             <Link
               to="/contato"
@@ -122,13 +122,13 @@ export default function Header() {
             Serviços
           </Link>
 
-          <a
-            href="#"
+          <Link
+            to="/projetos"
             onClick={() => setIsOpen(false)}
             className="text-lg text-gray-300 hover:text-cyan-400 transition"
           >
             Projetos
-          </a>
+          </Link>
 
           <Link
             to="/contato"
