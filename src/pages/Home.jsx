@@ -1,5 +1,6 @@
 // src/pages/Home.jsx
 import { ArrowRight, ShieldCheck, Code2, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -32,14 +33,20 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="px-7 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 transition duration-300 flex items-center gap-2 shadow-xl shadow-cyan-500/20">
-                Solicitar projeto
+              <Link
+                to="/servicos"
+                className="px-7 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 transition duration-300 flex items-center gap-2 shadow-xl shadow-cyan-500/20"
+              >
+                Solicitar serviço
                 <ArrowRight size={18} />
-              </button>
+              </Link>
 
-              <button className="px-7 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition">
-                Ver serviços
-              </button>
+              <Link
+                to="/projetos"
+                className="px-7 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
+              >
+                Ver projetos
+              </Link>
             </div>
           </div>
 
